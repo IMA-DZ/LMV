@@ -15,4 +15,6 @@ The canonical source for LibreMetaverse (as well as the bug tracker) can be
 found at:
 https://bitbucket.org/cinderblocks/libremetaverse
 
-![Build status](https://ci.appveyor.com/api/projects/status/18rb6y55iivi6i3h?svg=true)
+This repo is  for IMA testing
+
+Travis CLI for this repo is reporting 
