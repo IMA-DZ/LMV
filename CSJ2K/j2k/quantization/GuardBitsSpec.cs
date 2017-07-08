@@ -9,10 +9,10 @@
 * 
 * COPYRIGHT:
 * 
-* This software module was originally developed by Raphaël Grosbois and
+* This software module was originally developed by RaphaÃ«l Grosbois and
 * Diego Santa Cruz (Swiss Federal Institute of Technology-EPFL); Joel
-* Askelöf (Ericsson Radio Systems AB); and Bertrand Berthelot, David
-* Bouchard, Félix Henry, Gerard Mozelle and Patrice Onno (Canon Research
+* AskelÃ¶f (Ericsson Radio Systems AB); and Bertrand Berthelot, David
+* Bouchard, FÃ©lix Henry, Gerard Mozelle and Patrice Onno (Canon Research
 * Centre France S.A) in the course of development of the JPEG2000
 * standard as specified by ISO/IEC 15444 (JPEG 2000 Standard). This
 * software module is an implementation of a part of the JPEG 2000
@@ -119,18 +119,22 @@ namespace CSJ2K.j2k.quantization
 					
 					case 't':  // Tiles specification
 						tileSpec = parseIdx(word, nTiles);
-						if (curSpecType == SPEC_COMP_DEF)
+						if (curSpecType == SPEC_COMP_DEF){
 							curSpecType = SPEC_TILE_COMP;
-						else
+							}
+						else{
 							curSpecType = SPEC_TILE_DEF;
+							}
 						break;
 					
 					case 'c':  // Components specification
 						compSpec = parseIdx(word, nComp);
-						if (curSpecType == SPEC_TILE_DEF)
+						if (curSpecType == SPEC_TILE_DEF){
 							curSpecType = SPEC_TILE_COMP;
-						else
+							}
+						else{
 							curSpecType = SPEC_COMP_DEF;
+							}
 						break;
 					
 					default:  // Step size value
@@ -155,19 +159,21 @@ namespace CSJ2K.j2k.quantization
 						}
 						else if (curSpecType == SPEC_TILE_DEF)
 						{
-							for (int i = tileSpec.Length - 1; i >= 0; i--)
+							for (int i = tileSpec.Length - 1; i >= 0; i--){
 								if (tileSpec[i])
 								{
 									setTileDef(i, (System.Object) value_Renamed);
 								}
+							}
 						}
 						else if (curSpecType == SPEC_COMP_DEF)
 						{
-							for (int i = compSpec.Length - 1; i >= 0; i--)
+							for (int i = compSpec.Length - 1; i >= 0; i--){
 								if (compSpec[i])
 								{
 									setCompDef(i, (System.Object) value_Renamed);
 								}
+							}
 						}
 						else
 						{
@@ -224,8 +230,9 @@ namespace CSJ2K.j2k.quantization
 						case SPEC_TILE_DEF: 
 							for (int c = nc - 1; c >= 0; c--)
 							{
-								if (specValType[0][c] == SPEC_TILE_DEF)
+								if (specValType[0][c] == SPEC_TILE_DEF){
 									specValType[0][c] = SPEC_DEF;
+								}
 							}
 							tileDef[0] = null;
 							break;
@@ -233,8 +240,9 @@ namespace CSJ2K.j2k.quantization
 						case SPEC_COMP_DEF: 
 							for (int t = nt - 1; t >= 0; t--)
 							{
-								if (specValType[t][0] == SPEC_COMP_DEF)
+								if (specValType[t][0] == SPEC_COMP_DEF){
 									specValType[t][0] = SPEC_DEF;
+								}
 							}
 							compDef[0] = null;
 							break;
