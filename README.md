@@ -17,4 +17,4 @@ https://bitbucket.org/cinderblocks/libremetaverse
 
 This repo is  for IMA testing
 
-Travis CLI for this repo is reporting 
+Travis CLI for this repo is reporting https://travis-ci.org/IMA-DZ/LMV.svg?branch=master
