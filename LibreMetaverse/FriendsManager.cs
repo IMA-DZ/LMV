@@ -559,8 +559,10 @@ namespace OpenMetaverse
 
                 Client.Network.SendPacket(request);
 
-                if (FriendList.ContainsKey(agentID))
+                if (FriendList.ContainsKey(agentID)){
+                    
                     FriendList.Remove(agentID);
+                }
             }
         }
         /// <summary>Process an incoming packet and raise the appropriate events</summary>
@@ -675,8 +677,9 @@ namespace OpenMetaverse
                 FriendList.ForEach(
                     delegate(KeyValuePair<UUID, FriendInfo> kvp)
                     {
-                        if (String.IsNullOrEmpty(kvp.Value.Name))
+                        if (String.IsNullOrEmpty(kvp.Value.Name)){
                             names.Add(kvp.Key);
+                        }
                     }
                 );
 
@@ -855,10 +858,12 @@ namespace OpenMetaverse
             {
                 if (m_FriendshipOffered != null)
                 {
-                    if (FriendRequests.ContainsKey(e.IM.FromAgentID))
+                    if (FriendRequests.ContainsKey(e.IM.FromAgentID)){
                         FriendRequests[e.IM.FromAgentID] = e.IM.IMSessionID;
-                    else
+                    }
+                    else {
                         FriendRequests.Add(e.IM.FromAgentID, e.IM.IMSessionID);
+                    }
 
                     OnFriendshipOffered(new FriendshipOfferedEventArgs(e.IM.FromAgentID, e.IM.FromAgentName, e.IM.IMSessionID));
                 }
