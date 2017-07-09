@@ -15,8 +15,9 @@ namespace OpenMetaverse.TestClient.Commands.Movement
 
         public override string Execute(string[] args, UUID fromAgentID)
         {
-            if (args.Length != 3)
+            if (args.Length != 3){
                 return "Usage: moveto x y z";
+            }
 
             uint regionX, regionY;
             Utils.LongToUInts(Client.Network.CurrentSim.Handle, out regionX, out regionY);
