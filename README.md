@@ -5,11 +5,13 @@ This repo is  for IMA testing.
 
 20170806  (dz)    Cloned from Bitbucket, Activated  Travis  CI
                 
-                Travis CLI for this repo is reporting  [![Build Status](https://travis-ci.org/IMA-DZ/LMV.svg?branch=master)](https://travis-ci.org/IMA-DZ/LMV)
+                Travis CLI for this repo is reporting  
+                [![Build Status](https://travis-ci.org/IMA-DZ/LMV.svg?branch=master)](https://travis-ci.org/IMA-DZ/LMV)
                 
 20170807  (dz)    Integrated Codacity, Update  READMEs  with  badges
 
-                Current  Codacity analysis   [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4311e24b18a4f92b08fb76f033d91c7)](https://www.codacy.com/app/InfiniteMetaverseAlliance_Codacity/LMV?utm_source=github.com&utm_medium=referral&utm_content=IMA-DZ/LMV&utm_campaign=badger)
+                Current  Codacity analysis
+                [![Codacy Badge](https://api.codacy.com/project/badge/Grade/d4311e24b18a4f92b08fb76f033d91c7)](https://www.codacy.com/app/InfiniteMetaverseAlliance_Codacity/LMV?utm_source=github.com&utm_medium=referral&utm_content=IMA-DZ/LMV&utm_campaign=badger)
 
 LibreMetaverse
 ===============================================================================
